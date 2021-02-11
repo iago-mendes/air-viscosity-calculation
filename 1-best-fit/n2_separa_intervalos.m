@@ -1,16 +1,16 @@
-x_10s = x_1;
-t_10s = t_1;
+x_10s = x_f;
+t_10s = t_f;
 
-x_1min = x_1;
-t_1min = t_1;
+x_1min = x_f;
+t_1min = t_f;
 
-x_5min = x_1;
-t_5min = t_1;
+x_5min = x_f;
+t_5min = t_f;
 
-x_end = x_1;
-t_end = t_1;
+x_end = x_f;
+t_end = t_f;
 
-for i=length(x_1) : -1 : 1
+for i=length(x_f) : -1 : 1
 	if t_10s(i) <= 243.4327999 || t_10s(i) >= 253.4327999
 		x_10s(i) = [];
 		t_10s(i) = [];

@@ -34,3 +34,16 @@
 
 - Os 300 segundos iniciais foram removidos devido a instabilidades na filmagem.
 - Os dados com amplitudes inferiores a 0.002 metros (o que ocorre por volta de 1350 segundos) foram removidos, pois estão são menores do que a nossa margem de erro.
+
+### Resultados
+
+- `x_f`
+	> Vetor com elongações filtradas da bola (em metros).
+- `t_f`
+	> Vetor dos tempos correspondentes de `x_f` (em segundos)
+- `A_f`
+	> Vetor com amplitudes filtradas da bola (em metros).
+- `t_A_f`
+	> Vetor com tempos correspondentes de `A_f` (em segundos).
+
+## `n2_separa_intervalos.m`
