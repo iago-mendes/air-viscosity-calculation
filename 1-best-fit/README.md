@@ -14,3 +14,23 @@
 	> vetor com tempos correspondentes à `A` e `lnA` (em segundos)
 - `x`
 	> vetor com elongações da bola em relação à `O` (em metros)
+
+# Descrição passo a passo
+
+## `n0_dados.mat`
+> Workspace com dados coletados [aqui](https://github.com/hugoalkimim/ViscosidadeDoAr).
+
+- `x`
+	> Vetor com elongações da bola (em metros).
+- `t`
+	> Vetor dos tempos correspondentes de `x` (em segundos)
+- `A`
+	> Vetor com amplitudes da bola (em metros).
+- `t_A`
+	> Vetor com tempos correspondentes de `A` (em segundos).
+
+## `n1_filtra_dados.m`
+> Script que elimina dados inválidos.
+
+- Os 300 segundos iniciais foram removidos devido a instabilidades na filmagem.
+- Os dados com amplitudes inferiores a 0.002 metros (o que ocorre por volta de 1350 segundos) foram removidos, pois estão são menores do que a nossa margem de erro.
