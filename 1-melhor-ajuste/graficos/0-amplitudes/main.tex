@@ -1,0 +1,36 @@
+\documentclass[border = 0.25cm]{standalone}
+
+\usepackage{pgfplots}
+
+\begin{document}
+	\begin{tikzpicture}
+		\begin{axis}
+		[
+			ylabel = Amplitude ($m$),
+			xlabel = Tempo ($s$),
+			width = 10cm,
+			height = 10cm,
+		]
+			% a {0.007678}
+			% b {-0.003881}
+			% c {0.00943}
+			% d {-0.001509}
+			
+			\addplot [color = green, domain = 0:1200, line width = 1pt]
+				{0.007678*exp(-0.003881*x) + 0.00943*exp(-0.001509*x)};
+			\addlegendentry {$a \; exp(b \; x) + c \; exp(d \; x)$}
+
+			\addplot [color = blue, domain = 0:1200, line width = 1pt]
+				{0.007678*exp(-0.003881*x)};
+			\addlegendentry {$a \; exp(b \; x)$}
+
+			\addplot [color = red, domain = 0:1200, line width = 1pt]
+				{0.00943*exp(-0.001509*x)};
+			\addlegendentry {$c \; exp(d \; x)$}
+
+			\addplot [color = black, mark = square, only marks, mark size = 1pt]
+				table [x=t_A, y=A, col sep=comma] {../dados_tabelas/amplitudes.csv};
+			\addlegendentry {Amplitude vs. Tempo}
+		\end{axis}
+	\end{tikzpicture}
+\end{document}
