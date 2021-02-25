@@ -1,0 +1,24 @@
+\documentclass[border = 0.25cm]{standalone}
+
+\usepackage{pgfplots}
+
+\begin{document}
+	\begin{tikzpicture}
+		\begin{axis}
+		[
+			ylabel = Elongação ($m$),
+			xlabel = Tempo ($s$),
+			width = 20cm,
+			height = 10cm,
+			trig format plots=rad
+		]
+			\addplot [color = black, mark = square, only marks, mark size = 1pt]
+				table [x=t_end, y=x_end, col sep=comma] {../dados_tabelas/elongacoes_end.csv};
+			\addlegendentry {Elongação vs. Tempo}
+			
+			\addplot [color = green, domain = 0:300, line width = 1pt, samples=1000]
+				{0.00943 * exp(-0.001509 * x) * cos(9.236 * x + 0.05)};
+			\addlegendentry {$0.00943 \; exp(-0.001509 \; t) \; cos(a \; t + b)$}
+		\end{axis}
+	\end{tikzpicture}
+\end{document}
