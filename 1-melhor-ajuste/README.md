@@ -13,6 +13,16 @@
 	> Vetor com tempos correspondentes de `A` (em segundos).
 
 ## `n1-ajuste-amplitudes.sfit`
+> Melhor ajuste das amplitudes (`A` vs. `t_A`).
+
+- O melhor ajuste acontece com 2 exponenciais.
+- Como os modelos mais conhecidos envolvem baixas amplitudes, escolhemos a 2ª exponencial.
+
+### Valores da 2ª exponencial
+
+- Amplitude inicial = 0.00943
+- gamma = -0.001509
+- A(600) = 0.004565
 
 ## `n2_separa_intervalos.m`
 > Script que separa dados em intervalos.
